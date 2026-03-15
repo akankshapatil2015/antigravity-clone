@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    overflow:hidden;
+    font-family:Arial;
+  }
+  
+  .logo{
+    text-align:center;
+    margin-top:40px;
+  }
+  
+  .box{
+    width:120px;
+    height:60px;
+    background:#4285f4;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    border-radius:8px;
+  }
