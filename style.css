@@ -1,22 +1,110 @@
-body{
-    margin:0;
-    overflow:hidden;
-    font-family:Arial;
-  }
-  
-  .logo{
-    text-align:center;
-    margin-top:40px;
-  }
-  
-  .box{
-    width:120px;
-    height:60px;
-    background:#4285f4;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:absolute;
-    border-radius:8px;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); */
+    background-image: url(/3025451.jpg);
+    object-fit: cover;
+    background-size: cover;
+    font-family: 'Inter', system-ui, sans-serif;
+    cursor: crosshair;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+#title-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+#title-overlay h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
+    text-shadow:
+        0 0 40px rgba(66, 133, 244, 0.8),
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#title-overlay p {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+#controls {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    pointer-events: auto;
+}
+
+#controls button {
+    padding: 0.5rem 1.1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: transform 0.1s ease;
+    font-family: inherit;
+}
+
+#controls button:hover {
+    transform: scale(1.05);
+}
+
+#controls button:active {
+    transform: scale(0.95);
+}
+
+#btn-gravity {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#btn-explode {
+    background: rgba(234, 67, 53, 0.6);
+}
+
+#btn-add {
+    background: rgba(66, 133, 244, 0.6);
+}
+
+#btn-clear {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#counter {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+    user-select: none;
+}
